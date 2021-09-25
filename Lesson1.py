@@ -55,7 +55,7 @@ print('Конец программы задиния №1', end='\n\n')
 
 # Задание № 2а
 
-numbers = [number**3 for number in range(1, 1001)]
+numbers = [number**3 for number in range(1, 1001, 2)]  # добавлен шаг перебора
 
 result_a = 0  # Объявление переменной для хранения результата вычислений
 
@@ -65,9 +65,9 @@ for unit in numbers:
     total = 0  # Объявление переменной для хранения суммы цифр в числе
 
     for digit in range(len(unit)):  # Объявление переменной суммы цифр в числе
-
         total += int(digit)
-        result_a += total if total % 7 == 0 else 0  # Если сумма делится на 7, то результат суммируется
+
+    result_a += int(unit) if total % 7 == 0 else 0  # Если сумма делится на 7, то результат суммируется
 
 print(result_a)
 
@@ -81,9 +81,9 @@ for unit in numbers:
     total = 0  # Объявление переменной для хранения суммы цифр в числе
 
     for digit in range(len(unit)):
-
         total = total + int(digit)
-        result_b += total if total % 7 == 0 else 0  # Если сумма делится на 7, то результат суммируется
+
+    result_b += int(unit) if total % 7 == 0 else 0  # Если сумма делится на 7, то результат суммируется
 
 print(result_b)
 print('Конец программы задания №2', end='\n\n')
