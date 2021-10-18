@@ -1,4 +1,5 @@
 import os
+import json
 
 
 def dict_creator(data, value):
@@ -41,4 +42,6 @@ for item in os.listdir(folder):
 
 result = dict(sorted(result.items(), reverse=True))
 
-print(result)
+with open(f'{"some_data"}_summary.json', 'w', encoding='utf-8') as f:
+    json.dump(result, f)
+
